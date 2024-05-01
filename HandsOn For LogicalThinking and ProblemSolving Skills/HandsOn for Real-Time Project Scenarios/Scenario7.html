@@ -1,0 +1,23 @@
+<!-- 
+- Scenario -
+
+checks if all values inside keys in an object are equal
+
+- Question -
+
+Create a function that checks if all keys in an object are equal to a specific string
+
+Input Example : ({"key1": "value", "key2": "value"}, "value")
+Output Example : True 
+-->
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(a, c) {
+        let result = Object.values(a).every(a => a === c)
+        return result
+    }
+    console.log(fun({ key1: "value", key2: "value" }, "value")) // Output True
+
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabs {
+        display: flex;
+        list-style: none;
+
+        margin: 0;
+    }
+
+    li {
+        padding: 0 40px 0 40px;
+        background-color: antiquewhite;
+        border: 1px solid;
+    }
+
+    .wrap {
+        padding-left: 100px;
+        border: 1px solid;
+        margin-left: 40px;
+        margin-right: 400px;
+    }
+
+    .wrap div {
+        display: none;
+    }
+
+    .showActive {
+        background-color: blueviolet;
+        color: white;
+        padding-left: 5px;
+        text-align: center;
+
+    }
+
+    .wrap .showActive {
+        display: block;
+        margin-right: 385px;
+
+    }
+</style>
+
+<body>
+
+    <ul class="tabs">
+        <li class="showActive">tab 1</li>
+        <li>tab 2</li>
+        <li>tab 3</li>
+    </ul>
+
+    <div class="wrap">
+        <div class="showActive">
+            <p>Tab content 1</p>
+            <p>You must be the change you wish to see in the world. - ...
+                Spread love everywhere you go. ...
+                The only thing we have to fear is fear itself. - ...
+                Darkness cannot drive out darkness: only light can do that. ...
+                Do one thing every day that scares you. - ...
+                Well done is better than well said. -</p>
+        </div>
+        <div>
+            <p>Tab content 2</p>
+            <p>ust one small positive thought in the morning can change your whole day.” — ...
+                “Opportunities don't happen, you create them.” — ...
+                “Love your family, work super hard, live your passion.” — ...
+                “It is never too late to be what you might have been.” —</p>
+        </div>
+        <div>
+            <p>Tab content 3</p>
+            <p>What is life one line?
+                75 Simple Life Quotes in One Line You Should Write Down ...
+                Life is about creating yourself.” – George Bernard Shaw. “Our truest life is when we are in dreams
+                awake.” – Henry David Thoreau. “The great thing in this world is not so much where we are, but in what
+                direction we are going.</p>
+        </div>
+    </div>
+</body>
+<script>
+    let tabs = document.querySelectorAll('li')
+    let tabcontents = document.querySelectorAll('.wrap div')
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function () {
+            for (let j = 0; j < tabs.length; j++) {
+                tabs[j].classList.remove('showActive')
+                tabcontents[j].classList.remove('showActive')
+            }
+            this.classList.add('showActive')
+            tabcontents[i].classList.add('showActive')
+            console.log(0);
+        })
+    }
+</script>
+
+</html>

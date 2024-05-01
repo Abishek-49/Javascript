@@ -1,0 +1,38 @@
+<!-- 
+- Scenario -
+
+Identify the shortest distance to a character in a string from left to right or right to left. Return only the shortest one
+
+- Question -
+
+Write a function to find the shortest distance to a given character in a string, considering both left- to-night and right to left distances
+
+Input Example : 'radsarai', 's'
+Output Example : 3 left
+-->
+
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(value, character) {
+        let a = value.indexOf(character)
+        let c = value.split('').reverse().join('').indexOf(character)
+
+        if (a < c) {
+            console.log(`${a} left`)
+        } else if (a > c) {
+            console.log(`${c} Right`)
+        } else if (a != -1 && c != -1) {
+            return 'equal'
+        }
+        else {
+            return 'not discoverable'
+        }
+    }
+    console.log(fun('radsarai', 's'));  // 3 left
+    console.log(fun('radsaraisk', 's'));  // 1 right
+    console.log(fun('rasar', 's'));        // equal
+    console.log(fun('rasar', 'k'));      // not discvrble
+
+</script>

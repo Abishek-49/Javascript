@@ -1,0 +1,112 @@
+<!-- Practicing how to access a property in a object using dot notation and performing some functions starts here -->
+
+<script>
+  const product = {
+    name: 'basketball',
+    price: 2095,
+    ['delivery-time']: '3 days'
+  }
+  console.log(product)
+  console.log(product.name)
+  console.log(product.price)
+  console.log(['delivery-time'])
+  product.price = 2095 + 500
+  console.log(product)
+  console.log(product.price)
+
+
+
+  function compareprice(product1, product2) {
+
+    if (product1.price < product2.price) {
+      return product1;
+    } else {
+      return product2;
+    }
+  }
+
+  // return product2.price
+
+
+  const product1 = {
+    name: 'basketball',
+    price: 2095
+  };
+  const product2 = {
+    name: 'football',
+    price: 2000
+  };
+  console.log(compareprice(product1, product2));
+
+
+  function compareprice(product1, product2) {
+
+    if (!product1.price > product2.price) {
+      return product1.price
+    } else {
+      return product2.price
+    }
+  }
+
+  product1 = {
+    name: 'basketball',
+    price: 2095
+  }
+  product2 = {
+    name: 'football',
+    price: 2000
+  }
+  console.log(compareprice(product1, product2));
+
+  function isSameProducts(product1, product2) {
+    if (product1 === product2) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  product1 = {
+    name: 'basket',
+    price: 20
+  }
+  product2 = {
+    name: 'basket',
+    price: 20
+  }
+  product1 = product2;
+
+  console.log(isSameProducts())
+
+
+</script>
+<!-- Practicing how to access a property in a object using dot notation and performing some functions ends here -->
+
+
+<script>
+  //---- we can rename the value assigned to a property by redeclaring it once again with the changes ----//
+  let v = { name: 'abi', age: { mabe1: 20 } }
+  v.name = 'nara'
+  console.log(v)
+
+  //---- we can rename the value assigned to a property by redeclaring it once again with the changes by accesing the index of an array using [index Position] [''] ----//
+  let x = [{ name: 'abi', age: { mabe1: 20 } }]
+  x[0]['name'] = 'nara'
+  console.log(x)
+
+  //---- we can rename the value assigned to a property by redeclaring it once again with the changes by accesing the index of an array using dot notation too ----//
+  let x = [{ name: 'abi', age: { mabe1: 20 } }]
+  x[0].name = 'nara'
+  console.log(x)
+
+  //---- we can also insert a new property and its value inside an object by accesing the index of an array using dot notation ----//
+  let x = [{ name: 'abi', age: { mabe1: 20 } }]
+  x[0].name1 = 'nara'
+  console.log(x)
+
+  //---- we can also insert a new property and its value inside an object by accesing the index of an array using [index Position] [''] too ----//
+  let x = [{ name: 'abi', age: { mabe1: 20 } }]
+  x[0]['name1'] = 'nara'
+  console.log(x)
+
+</script>

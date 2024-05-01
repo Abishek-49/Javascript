@@ -1,0 +1,297 @@
+<!-- Practicing how to call function in different ways using methods starts here -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function practice</title>
+</head>
+
+<body>
+    <script>
+        function greet() {
+            console.log('hello')
+        }
+        greet();
+        greet();
+        greet();
+
+        function greet(name, number =
+            'default') {
+            console.log(`hello ${name}`)
+            console.log('hello ' + number)
+        }
+        greet('abishek', 'abi');
+        greet('abishek');
+        greet('abishek', 2);
+
+        function greet(name) {
+            result = !name ? 'hi there' : `hello ${name}`
+            console.log(result)
+        }
+        greet();
+        greet('abi');
+        greet();
+
+        function greet(name) {
+            if (!name) {
+                console.log('hi there')
+            } else {
+                console.log(`hello ${name}`)
+            }
+        }
+        greet();
+        greet('abi');
+        greet();
+
+        function convertToFahrenheit(celcius) {
+            return (celcius * 9 / 5) + 32
+        }
+        console.log(convertToFahrenheit(25))
+
+        function convertToCelcius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9
+        }
+        console.log(convertToCelcius(86))
+
+        function greet(name) {
+            return (`hello ${name}`)
+        }
+        console.log(greet('abi'))
+        console.log(greet('arun'))
+
+        function convertToFahrenheit(celcius) {
+            return (celcius * 9 / 5) + 32
+        }
+        function convertToCelcius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9
+        }
+        function convertToTemperature(degrees, unit) {
+            if (unit === 'C') {
+
+                result = convertToFahrenheit(degrees)
+                return (`${result}F`)
+
+            } else if (unit === 'F') {
+
+                result = convertToCelcius(degrees)
+                return (`${result}C`)
+            }
+        }
+        console.log(convertToTemperature(25, 'C'));
+        console.log(convertToTemperature(86, 'F'));
+    </script>
+</body>
+
+</html>
+<!-- Practicing how to call function in different ways using methods ends here -->
+
+
+
+<!-- calculator using functions -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <button onclick="
+      calculation +='1'
+console.log(calculation)
+      ">
+            1
+        </button>
+        <button onclick="
+    calculation +='2'
+    console.log(calculation)
+    ">
+            2
+        </button>
+        <button onclick="
+    calculation +='3'
+    console.log(calculation)
+    ">
+            3
+        </button>
+        <button onclick="
+    calculation +='.'
+    console.log(calculation)
+    ">
+            .
+        </button>
+    </p>
+    <p>
+        <button onclick="
+      calculation +='4'
+      console.log(calculation)
+      ">
+            4
+        </button>
+
+        <button onclick="
+    calculation +='5'
+    console.log(calculation)
+    ">
+            5
+        </button>
+        <button onclick="
+    calculation +='6'
+    console.log(calculation)
+    ">
+            6
+        </button>
+        <button onclick="
+    calculation +='/'
+    console.log(calculation)
+    ">
+            /
+        </button>
+    </p>
+    <p>
+        <button onclick="
+      calculation +='7'
+      console.log(calculation)
+      ">
+            7
+        </button>
+        <button onclick="
+    calculation +='8'
+    console.log(calculation)
+    ">
+            8
+        </button>
+        <button onclick="
+    calculation +='9'
+    console.log(calculation)
+    ">
+            9
+        </button>
+        <button onclick="
+    calculation +='*'
+    console.log(calculation)
+    ">
+            *
+        </button>
+    </p>
+    <p>
+        <button onclick="
+      calculation +='0'
+      console.log(calculation)
+      ">
+            0
+        </button>
+        <button onclick="
+    calculation = eval(calculation)
+    console.log(calculation)
+    ">
+            =
+        </button>
+        <button onclick="
+          calculation =''
+          console.log(calculation)
+          ">
+            reset
+        </button>
+    </p>
+    <script>
+        let calculation = '';
+
+    </script>
+</body>
+
+</html>
+
+<!-- cartquantity using conditions inside the function -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="
+    cartQuantity = 0
+    console.log(`cart quantity : ${cartQuantity}`)
+    ">
+        show quantity
+    </button>
+    <button onclick="
+fullcartquantity(1)
+  ">
+        add to cart
+    </button>
+    <button onclick="
+fullcartquantity(3)
+ ">
+        +3
+    </button>
+    <button onclick="
+fullcartquantity(5)
+ ">
+        +5
+    </button>
+    <button onclick="
+fullcartquantity(-2)
+ ">
+        -2
+    </button>
+
+    <button onclick="
+fullcartquantity(-4)
+ ">
+        -4
+    </button>
+    <button onclick="
+console.log('')
+cartQuantity=0;
+ console.log(`cart quantity was reset`)
+ console.log(`cart quantity : ${cartQuantity}`)
+ ">
+        reset
+    </button>
+    <script>
+        let cartQuantity = 0;
+        function fullcartquantity(value) {
+            if (cartQuantity + value > 10) {
+                alert('cart is full')
+            } else if (cartQuantity + value < 0) {
+                alert('cart is empty')
+            } else {
+                cartQuantity += value;
+                console.log(`cart quantity : ${cartQuantity}`)
+            }
+        }
+    </script>
+
+    <!-- we can aslo use return  -->
+
+    <script>
+        let cartQuantity = 0;
+        function updateCartQuantity(change) {
+            if (cartQuantity + change > 10) {
+                alert('The cart is full');
+                return;
+            }
+            if (cartQuantity + change < 0) {
+                alert('Not enough items in the cart');
+                return;
+            }
+            cartQuantity += change;
+            console.log(`Cart quantity: ${cartQuantity}`);
+        }
+    </script>
+</body>
+
+</html>

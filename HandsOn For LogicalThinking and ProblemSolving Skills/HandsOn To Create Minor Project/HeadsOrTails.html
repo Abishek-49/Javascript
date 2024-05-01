@@ -1,0 +1,31 @@
+<!-- Switch Between heads r tails to get Different message as output in the Console -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="
+        randomnumber = Math.random()
+        result =randomnumber < 0.5? 'heads':'tails'
+        chosen='heads'
+        console.log(chosen===result? 'you have chosen heads and its heads':'sorry it is tails')
+        ">
+        heads
+    </button>
+
+    <button onclick="
+    randomnumber = Math.random()
+    result =randomnumber < 0.5? 'heads':'tails'
+    chosen='heads'
+    console.log(chosen===result? 'you have chosen tails and its tails':'sorry it is heads')
+    ">
+        tails
+    </button>
+</body>
+
+</html>

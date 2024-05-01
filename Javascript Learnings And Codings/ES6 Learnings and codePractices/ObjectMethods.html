@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>JavaScript Objects</h1>
+  <h2>The Object.keys() Method</h2>
+  <p>Object.keys() returns an Array Iterator object with the keys of an object:</p>
+  <p id="demo"></p>
+  <script>
+    const person = {
+      firstName: { maybe: "abi" },
+      lastName: "Doe",
+      age: 50,
+      eyeColor: "blue"
+    };
+
+    console.log(Object.values(person))
+    document.getElementById("demo").innerHTML = keys;
+    let a = "bi".padStart(3, 'a').trimStart()
+    console.log(`${a}shek Narayan`.length)
+  </script>
+
+  <p>Object.keys() is not supported in Internet Explorer.</p>
+
+</body>
+
+</html>
+
+<script>
+  //-- using object.keys we are accesssing all the property name which returns in a single array --/
+  function fun(value) {
+    return Object.keys(value)
+
+  }
+  console.log(fun({ name: 'abi', age: 22 }))
+
+  //-- using object.values we are accesssing all the values which returns in a single array --/
+  function fun(value) {
+    return Object.values(value)
+
+  }
+  console.log(fun({ name: 'abi', age: 22 }))
+
+  //-- using object.entries we are accesssing all the property names & values in a given object which returns in a 2-D array --/
+  function fun(value) {
+    return Object.entries(value)
+
+  }
+  console.log(fun({ name: 'abi', age: 22 }))
+
+  //--- Using obeject.keys i.e we r accessing property of the selected value check in console --- //
+
+  //---- Example-1 ----//
+  function fun(a, d) {
+    let e = Object.keys(a).find(c => a[c] === d)
+    return e
+  }
+  console.log(fun({ name: 'abi', age: 22 }, 22))
+  //---- Example-2 ----//
+  function a(b, c) {
+    let d = Object.keys(b).find(e => b[e] === c)
+    return d
+  }
+  console.log(a({ name: 'abishek', age: 23 }, 'abishek'))
+  //---- Example-3 ----//
+  function fun(object, values) {
+    return Object.keys(object).find((a) => object[a] === values)
+  }
+
+  console.log(fun({ name: '22', age: 22 }, '22'))
+
+  //--- Accessing obeject.value i.e value of the selected property check in console --- //
+
+  //---- Example-1 ----//
+  function fun(a, b) {
+    return a[b]
+  }
+  console.log(fun({ name: 'abi', age: 22 }, 'name'))
+  //---- Example-2 ----//
+  function a(b, c) {
+    let d = b[c]
+    return d
+  }
+  console.log(a({ name: 'abishek', age: 23 }, 'age'))
+  //---- Example-3 to access values of the nested object ----//
+  function fun(a, b, c) {
+
+    let d = a[b][c]
+    return d
+  }
+  console.log(fun(
+
+    { name: { name1: 'abi', name2: 'a' }, age: { maybe1: 20, maybe2: 22 } }, 'name', 'name2'))
+
+  //---- To check whether the property name is present inside an object ----//
+
+  //---- Example-1 ----//
+  function fun(a, b) {
+    return a.hasOwnProperty(b)
+  }
+  console.log(fun({ name: 'abi', age: 20 }, 'name'))
+  //---- Example-2 ----//
+  function fun(a, b) {
+    return b in a
+  }
+  console.log(fun({ name: 'abi', age: 20 }, 'name'))
+
+  //--- using object.value & Every method i.e we are checking whether every value assigned to a property is same according to the js expression check in console --//
+
+  //---- Example-1 ----//
+  function fun(a, c) {
+    let result = Object.values(a).every(a => a === c)
+    return result
+  }
+  console.log(fun({ name: 22, age: 22 }, 22))
+  //---- Example-2 ----//
+  function fun(val1, val2) {
+    return Object.values(val1).every(value => value === val2)
+  }
+
+  console.log(fun({ name: '22', name2: '22' }, '22'))
+  //---- Example-3 ----//
+  function fun(a, b) {
+    return Object.values(a).every(a => Object.values === b)
+  }
+  console.log(fun({ name: 'abi', age: 22 }, "value"))        
+</script>
+
+
+
+<script>
+  //-- using filter into a arrow function to filter out the objects and return only the filtered one in new object according to the js expressions --//
+  let values = [
+    { id: 1, cost: 2000 },
+    { id: 2, cost: 3000 },
+    { id: 3, cost: 4000 }
+  ];
+  result = values.filter((lesscost) => lesscost.cost < 4000);
+  console.log(result)
+
+
+  //-- using filter into a normal function to filter out the objects and return only the filtered one in new object according to the js expressions --//
+  let values = [
+    { id: 1, cost: 2000 },
+    { id: 2, cost: 3000 },
+    { id: 3, cost: 4000 }
+  ];
+  result = values.filter(price)
+  function price(lesscost) {
+    return lesscost.cost < 4000 /
+      console.log(result)
+  }
+
+
+
+  //-- using map into a normal function to modify the objects and returning a new array of modified objects according to the js expressions --//
+  let name = [
+    { id: 0, first_name: 'abi', last_name: 'narayan' },
+    { id: 0, first_name: 'arun', last_name: 'selvan' },
+    { id: 0, first_name: 'bharani', last_name: 'barbs' }
+  ];
+  result = name.map(function (name) {
+
+    let fullname = [name.first_name, name.last_name].join(' ');
+    let obj = { id: name.id, fullname: fullname }
+    return obj
+  });
+  console.log(result);
+
+
+  //-- using find into a normal function and returning a new object with first element it finds according to the js expressions--//
+
+  let name = [
+    { id: 0, first_name: 'abi', last_name: 'narayan' },
+    { id: 0, first_name: 'arun', last_name: 'selvan' },
+    { id: 0, first_name: 'bharani', last_name: 'barbs' }
+  ];
+  result = name.find(function (name) {
+
+    let fullname = name.first_name + name.last_name;
+    let obj = { id: name.id, fullname: fullname }
+    return obj
+  });
+  console.log(result);
+
+  //-- using findIndex into a normal function and returning the index of first element it finds according to the js expressions--//
+  let name = [
+    { id: 0, first_name: 'abi', last_name: 'narayan' },
+    { id: 0, first_name: 'arun', last_name: 'selvan' },
+    { id: 0, first_name: 'bharani', last_name: 'barbs' }
+  ];
+  result = name.findIndex(function (name) {
+    let fullname = name.first_name + name.last_name;
+    let obj = { id: name.id, fullname: fullname }
+    return obj
+  });
+  console.log(result);
+
+  //-- using findIndex into a normal function and returning the index of given expression that elements index get printed in console--//
+  let values = [
+    { id: 1, cost: 2000 },
+    { id: 2, cost: 3000 },
+    { id: 3, cost: 4000 }
+  ];
+  result = values.findIndex(function (lesscost) {
+    return lesscost.cost === 4000
+  });
+  console.log(result)
+
+</script>

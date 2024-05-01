@@ -1,0 +1,53 @@
+<!-- heads & tails flip game using function with local storage -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="
+  flipgame('heads')
+        ">
+    heads
+  </button>
+  <button onclick="
+    flipgame('tails')
+    ">
+    tails
+  </button>
+  <script>
+    let score = ((JSON.parse(localStorage.getItem('score')))) || {
+      wins: 0,
+      loss: 0
+    }
+    function flipgame(guess) {
+      randomnumber = Math.random()
+
+      result = ''
+
+      if (randomnumber < 0.5) {
+        result = 'heads'
+      } else if (randomnumber <= 1) {
+        result = 'tails'
+      }
+      if (guess == result) {
+        score.wins++
+        alert(`you win  
+  win = ${score.wins}`)
+
+      } else {
+        score.loss++
+        alert(`you loss 
+  loss = ${score.loss}`)
+
+      }
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+  </script>
+</body>
+
+</html>

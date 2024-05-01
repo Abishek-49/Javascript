@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Addition</h1>
+  <p>hi here some addition is going to happen</p>
+  <h1 id="demo"></h1>
+  <button onclick="my()">click for addition</button>
+  <button onclick="
+     addition('8'
+     )
+   ">
+    8
+  </button>
+
+  <button onclick="
+   addition('+')
+   ">
+    +
+  </button>
+
+  <button onclick="
+    addition('9')
+   ">
+    9
+  </button>
+
+  <button onclick="
+  total()
+   ">
+    =
+  </button>
+
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+
+  <script>
+
+    function my(value, value1) {
+
+      let result = `${value} and ${value1}`
+      document.getElementById("demo").innerHTML = result;
+
+    }
+    let cal = ''
+    function addition(value) {
+      cal += value
+      document.getElementById("demo2").innerHTML = cal;
+    }
+
+    function total() {
+      cal = eval(cal)
+      document.getElementById("demo3").innerHTML = cal;
+    }
+
+  </script>
+</body>
+
+</html>

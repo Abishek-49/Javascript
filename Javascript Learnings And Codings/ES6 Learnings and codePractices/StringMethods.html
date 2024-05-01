@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>JavaScript Strings</h1>
+  <h2>The slice() Method</h2>
+
+  <p>The sliced (extracted) part of the string is:</p>
+  <p id="demo"></p>
+
+  <script>
+    let text = 'Apple, Ban.na, Kiwi ${b}';
+    let part = text.slice(7);
+    document.getElementById("demo").innerHTML = part;
+  </script>
+</body>
+
+</html>
+
+<!-- String Methods & Learnings with Exercises practice -->
+<script>
+  //------------ length ------------
+  console.log("123456789".length)
+  console.log("abcgsfshjsj".length)
+
+  //------------ slice ------------
+  console.log("hello world".slice(0, 5)) // hello
+  console.log("hello world".slice(0, -6)) // hello
+  console.log("hello world".slice(-11, -6)) // hello
+  console.log("hello world".slice(0, 11)) //hello world
+  console.log("hello world".slice(-11)) //hello world
+
+  //------------ substring ------------
+  console.log("hello world".substring(2, 4)) // ll
+  console.log("hello world".substring(-2, -4)) // nothing 
+  console.log("hello world".substring(-2, 4)) // hell
+  console.log("hello world".substring(4, -2)) // hell
+  console.log("hello world".substring(4, 2)) // ll
+
+  //------------ substr ------------
+  console.log("hello world".substr(2, 5)) // llo w
+  console.log("hello world".substr(0, 4)) // hell
+  console.log("hello world".substr(0, 5)) // hello 
+  console.log("hello world".substr(1, 4)) //ello
+  console.log("hello world".substr(-2, 2)) //ld
+  console.log("abi arun mani".substr(1, 12))
+
+  //------------ toLocaleLowerCase ------------
+  console.log("hello world".toLocaleLowerCase())//hello world
+  console.log("HELLO world".toLocaleLowerCase())//hello world
+  console.log('GOOD MORNING'.toLowerCase())
+
+  //------------ toUpperCase ------------
+  console.log("HELLO world".toUpperCase())//HELLO WORLD
+
+  //------------ splice ------------
+  console.log("hello world".splice(0)) //hello world
+
+  //------------ repeat ------------
+  console.log('GOOD MORNING, '.repeat(5))
+
+  //------------ indexOf & includes ------------
+  console.log("abi arun mani".indexOf('i', 3))
+  console.log("abi arun mani".includes('i'))
+
+  //------------ lastIndexOf ------------
+  console.log("abi arun mani".lastIndexOf('i'))
+  console.log("abi arun mani".lastIndexOf('i', 5))
+
+
+  //------------ endsWith ------------
+  console.log("abi arun mani".endsWith('i'))
+  console.log("abi arun mani".endsWith('i', 2))
+
+  //------------ search ------------
+  console.log("abi arun mani mani".search('mani'))
+
+  //------------ charAt ------------
+  console.log("abi arun mani".charAt(1))
+
+  console.log("123456789".padStart(11, ' '))
+  console.log("123456789".padStart(10, 'i'))
+
+
+  //----------- HandsOnExercise 1 ------------------
+  let name = "abisheK";
+  let result = name.slice(0, 1).toUpperCase();
+  let result2 = name.slice(1).toLowerCase();
+  console.log(result.concat(result2));
+  //----------- HandsOnExercise 2 ------------------
+  let name = "abisheK".slice(0, 1).slice(1).toUpperCase().toLowerCase();
+  console.log(name.concat(name));
+  //----------- HandsOnExercise 3 ------------------
+  let name = "abisheK".toLowerCase();
+  let result = name.slice(0, 1).toUpperCase() + name.slice(1);
+  console.log(result)
+  console.log(result.concat(result2));
+  //----------- HandsOnExercise 4 ------------------
+  const str = "Geeks for Geeks";
+  const reversedStr = [...str].reverse().join("");
+  console.log(reversedStr);
+  //----------- HandsOnExercise 5 ------------------
+  name = "abi arun mani are friends but mani".replace('    ', ' arun ')
+  console.log(name)
+  //----------- HandsOnExercise 6 ------------------
+  name = "abi arun mani are friends but  mani".repeat(1)
+  console.log(name)
+  //----------- HandsOnExercise 7 ------------------
+  name = "abi arun mani arun and mani".match(/arun/ig)
+  result = name.indexOf('arun', 1)
+  console.log(name + ' ' + result)
+
+</script>

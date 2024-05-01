@@ -1,0 +1,22 @@
+<!-- 
+- Scenario -
+
+Return object value based on the function argument key
+
+- Question -
+
+Implement a function that returns the value of a given key in an object 
+
+Input Example : {"name": "John", "age": 25}, "age"
+Output Example : 25
+-->
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(a, b) {
+        return a[b]
+    }
+    console.log(fun({ "name": "John", "age": 25 }, "age"))// Output 25
+
+</script>

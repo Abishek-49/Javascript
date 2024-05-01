@@ -1,0 +1,26 @@
+<!--
+- Scenario -
+
+    whatever string you give that should be reversed by making the first letter capital
+
+- Question -
+
+Create a function that transforms a sentence into title case and reverses the order of words
+
+Input Example : "hello world"
+Output Example : dlrow olleH
+-->
+
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(v) {
+        let a = v.toLowerCase()
+        let b = v.charAt(0).toUpperCase() + a.slice(1)
+        let c = b.split('').reverse().join('')
+        return c
+    }
+    console.log(fun('heLlO WoRld'))  // dlrow olleH
+
+</script>

@@ -1,0 +1,23 @@
+<!-- 
+- Scenario -
+
+Write a function to accept an infinite number of arguments
+ 
+- Question -
+ 
+Implement a function that accepts an infinite number of arguments and returns their sum
+ 
+Input Example : 1, 2, 3
+Output Example : 6 
+-->
+
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(...c) {
+        return c.reduce((a, b) => a + b)
+    }
+    console.log(fun(11, 2, 6, 9, 4, 6)) //Output – 38
+
+</script>

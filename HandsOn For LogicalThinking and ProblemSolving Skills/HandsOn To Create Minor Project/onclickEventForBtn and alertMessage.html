@@ -1,0 +1,45 @@
+<!-- Try Switching between two buttons -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac</title>
+    <style>
+        .yellow-button {
+
+            background-color: yellow;
+            color: rgb(203, 21, 21);
+
+        }
+
+        .orange-button {
+            background-color: orange;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Adults Plain Cotton T-shirt
+    </p>
+    <p>
+        Price:$7.99
+    </p>
+    <button title="added" class="yellow-button" onclick="alert('added');">
+        Add to Cart
+    </button>
+    <button title="loading" class="orange-button" onclick="console.log(`${loading}`); alert('puchased');">
+        Buy Now
+    </button>
+
+    <script>
+        alert('welcome');
+        let loading = 'loading';
+    </script>
+</body>
+
+</html>

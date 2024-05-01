@@ -1,0 +1,23 @@
+<!-- 
+- Scenario -
+
+Find Duplicate Numbers in Subarray
+
+- Question -
+
+Implement a function that sinds duplicate number in subarrays and return them in a new array
+
+Input Example : [[1, 2, 3], [1, 0, 2, 2, 1]]
+Output Example : [],[2,1]
+-->
+
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(value) {
+        return value.map(arr => arr.filter((number, index, array) => array.indexOf(number) !== index))
+    }
+    console.log(fun([[1, 2, 3], [1, 0, 2, 2, 1]])) //Output – [],[2,1]
+
+</script>

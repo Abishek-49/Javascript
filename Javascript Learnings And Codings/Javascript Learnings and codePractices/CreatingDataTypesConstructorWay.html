@@ -1,0 +1,20 @@
+<!-- creating datatypes in constructorway starts here  -->
+
+<script>
+
+    let a = new String('abishek') // String {'abishek'} => typeof object
+    let b = new String(22) //String {'22'} => typeof object
+    let c = new Number('22') //Number {22} => typeof object
+    let d = new Number(22) //Number {22} => typeof object
+    let e = new Object({ name: 'abi', age: 20 }) // {name: 'abi', age:20} => typeof object
+    let f = new Object({ name: 'abi', age: { mabe1: 20 } })// {name: 'abi', age: {…}} => typeof object
+    let g = new Array([1, 2, 3, 4]) //[Array(4)] 0: (4) [1, 2, 3, 4] length: 1 => typeof object
+    let h = new Array([1, 2, 3, 4], [2, 2, 2, 2])//[Array(4), Array(4)] 0: (4) [1, 2, 3, 4] 1: (4) [2, 2, 2, 2] length: 2 => typeof object
+    let kkk = new Array({ name: 'abi', age: 20 }) //[{…}]
+    let kkk2 = new Object([1, 2, 3, 4])  //  [1, 2, 3, 4]
+    let i = new Boolean(true) //Boolean {true} => typeof object
+    console.log(g)
+
+</script>
+
+<!-- creating datatypes in constructorway ends here -->

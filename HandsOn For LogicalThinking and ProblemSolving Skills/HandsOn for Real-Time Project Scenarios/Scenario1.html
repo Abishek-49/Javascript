@@ -1,0 +1,44 @@
+<!-- 
+- Scenario -
+
+Identify the data type of the variable using control statement and ensure it works for all data
+
+- Question -
+
+Write a function that determines the data type of a given vanabile and returns it
+
+Input Example : []
+Output Example : Array 
+-->
+
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(a) {
+        if (Array.isArray(a)) {
+            return 'array'
+        }
+        else if (a === '' || a === 0) {
+            return 'Falsy value'
+        }
+        else if (a === null) {
+            return 'null'
+        }
+        else if (!a) {
+            return 'undefined'
+        }
+        else {
+            return typeof a
+        }
+    }
+    console.log(fun())
+    console.log(fun(''))
+    console.log(fun('abi'))
+    console.log(fun(0))
+    console.log(fun(5))
+    console.log(fun([]))
+    console.log(fun({}))
+    console.log(fun(null))
+
+</script>

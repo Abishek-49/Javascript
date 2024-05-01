@@ -1,0 +1,98 @@
+<!-- Array Methods & Learnings with Exercises practice -->
+
+<script>
+  //------------ HandsOnExercises reverse & join ------------
+  let name = ['r', 'a', 'd', 'o', 'r']
+  reverse = name.reverse().join('')
+  console.log(reverse)
+
+  if (reverse === name.reverse().join('')) {
+    console.log('palindrome')
+  } else {
+    console.log('no')
+  }
+
+  //------------ HandsOnExercises filter Example-1 ------------//
+  let values = [1, 2, 4, 8, 9, 5, 7]
+  result = values.filter(number)
+
+  function number(number1) {
+    return number1 >= 5;
+  }
+  console.log(result)
+
+  //----- simplyfing by reducing number of codes using arrow function for HandsOnExercises filter Example-1 --//
+  let values = [1, 2, 4, 8, 9, 5, 7];
+  result = values.filter((number1) => number1 >= 5);
+  console.log(result)
+
+  //---- filter Example-2 ------//
+  let values = [1, 2, 4, 8, 9, 5, 7];
+  result = values.filter((even) => even % 2 === 0);
+  console.log(result)
+
+  //---- filter Example-3 ------//
+  let values = [1, 2, 4, 8, 9, 5, 7]
+  result = values.filter((odd) => odd % 2 === 1);
+  console.log(result)
+
+  //---- HandsOnExercises push ------//
+  let num = ['1', '2', '3', '4', '5', '6']
+  //both the way u can declare the numbers according to the requirement the up one orelse the down one
+  let num = [1, 2, 3, 4, 5, 6]
+  let result = num.push("lemon")
+  console.log(num)
+
+  //---- HandsOnExercises unshift ------/
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  r = fruits.unshift('kiwi');
+  console.log(fruits)
+
+  //---- HandsOnExercises splice Example-1 ------/
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  r = fruits.splice(2, 0, 'kiwi');
+  console.log(fruits)
+
+  //---- splice Example-2 ------/
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  r = fruits.splice(2, 1);
+  console.log(fruits)
+
+  //---- splice Example-3 ------/
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  r = fruits.splice(1);
+  console.log(fruits)
+
+  //---- splice Example-4 ------/
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  r = fruits.splice(4, 0, 'kiwi');
+  console.log(fruits)
+
+  //---- splice Example-5 ------/
+  let ans = [1, 2, 3, 4]
+  ans1 = ans.splice(4)
+  console.log(ans)
+
+  //---- HandsOnExercises pop ------/
+  let fruits = [1, 2, 3, 4];
+  r = fruits.pop();
+  console.log(fruits)
+
+  //---- HandsOnExercises join ------/
+  let fruits = [1, 2, 3];
+  r = fruits.join('')
+  console.log(r)
+
+  //---- HandsOnExercises using reduce inside a function Example-1 ------//
+  function fun(...values) {
+    return values.reduce((a, b) => a + b)
+  }
+  console.log(fun(22, 33))
+
+  //---- using reduce inside a function Example-2 ----//
+  function fun(...c) {
+    return c.reduce((a, b) => a + b)
+  }
+  console.log(fun(11, 2, 6, 9, 4, 6))
+
+</script>

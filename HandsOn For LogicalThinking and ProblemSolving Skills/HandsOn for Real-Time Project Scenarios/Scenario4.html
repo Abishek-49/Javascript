@@ -1,0 +1,28 @@
+<!-- 
+- Scenario -
+
+Set Matrix Zeroes if any row has 0, then the entire row should be set to 0
+
+- Question -
+
+Write a function that sets zeroes in a matrix if any row contains 0
+
+Input Example : [[1,0,3], [4,8,6], [7,8,9]]
+Output Example : [[0,0,0], [4,8,6], [7,8,9]]
+-->
+<script>
+
+    //------- Answer : -------//   
+
+    function fun(aryy) {
+        let a = aryy.map(ary => {
+            if (ary.includes(0)) {
+                return ary.map((ary) => 0);
+            } else {
+                return ary
+            }
+        })
+        return a
+    }
+    console.log(fun([[1, 0, 3], [4, 8, 6], [7, 8, 9]])) //[[0,0,0], [4,8,6], [7,8,9]]
+</script>
